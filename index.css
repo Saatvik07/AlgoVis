@@ -1,0 +1,30 @@
+#loader {
+  visibility: hidden;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #0466c8;
+}
+.loading-image {
+  transform: translateY(-200px);
+  animation-name: jump;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+.center h2 {
+  color: #f0f3bd;
+}
+@keyframes jump {
+  0% {
+    transform: translateY(-200px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-200px);
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/AlgoVis/static/css/main.5b3599aa.chunk.css",
+    "main.js": "/AlgoVis/static/js/main.c1d18133.chunk.js",
+    "main.js.map": "/AlgoVis/static/js/main.c1d18133.chunk.js.map",
+    "runtime-main.js": "/AlgoVis/static/js/runtime-main.99adc081.js",
+    "runtime-main.js.map": "/AlgoVis/static/js/runtime-main.99adc081.js.map",
+    "static/js/2.a3f76e81.chunk.js": "/AlgoVis/static/js/2.a3f76e81.chunk.js",
+    "static/js/2.a3f76e81.chunk.js.map": "/AlgoVis/static/js/2.a3f76e81.chunk.js.map",
+    "index.html": "/AlgoVis/index.html",
+    "precache-manifest.0375b4163a1d4d1699df844d325499fb.js": "/AlgoVis/precache-manifest.0375b4163a1d4d1699df844d325499fb.js",
+    "service-worker.js": "/AlgoVis/service-worker.js",
+    "static/css/main.5b3599aa.chunk.css.map": "/AlgoVis/static/css/main.5b3599aa.chunk.css.map",
+    "static/js/2.a3f76e81.chunk.js.LICENSE.txt": "/AlgoVis/static/js/2.a3f76e81.chunk.js.LICENSE.txt",
+    "static/media/backPath.png": "/AlgoVis/static/media/backPath.589371d7.png",
+    "static/media/backRecur.png": "/AlgoVis/static/media/backRecur.34523b87.png",
+    "static/media/backSort.png": "/AlgoVis/static/media/backSort.ba8f12b5.png",
+    "static/media/beginPath.png": "/AlgoVis/static/media/beginPath.f675986f.png",
+    "static/media/beginRecur.png": "/AlgoVis/static/media/beginRecur.346d4063.png",
+    "static/media/beginSort.png": "/AlgoVis/static/media/beginSort.af512c67.png",
+    "static/media/bubbleImage.png": "/AlgoVis/static/media/bubbleImage.453ab072.png",
+    "static/media/factorial.png": "/AlgoVis/static/media/factorial.ebea7810.png",
+    "static/media/fibo.png": "/AlgoVis/static/media/fibo.7acbbebb.png",
+    "static/media/graph.png": "/AlgoVis/static/media/graph.2eb21b21.png",
+    "static/media/help.png": "/AlgoVis/static/media/help.c44cdfa6.png",
+    "static/media/logo.png": "/AlgoVis/static/media/logo.0fcf6454.png",
+    "static/media/merge.png": "/AlgoVis/static/media/merge.09838e04.png",
+    "static/media/quick.png": "/AlgoVis/static/media/quick.6d61a2a1.png",
+    "static/media/select.png": "/AlgoVis/static/media/select.2138dd85.png",
+    "static/media/sorry.png": "/AlgoVis/static/media/sorry.9003bc24.png",
+    "static/media/start.png": "/AlgoVis/static/media/start.98f3d038.png",
+    "static/media/target.png": "/AlgoVis/static/media/target.fd0bef70.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.99adc081.js",
+    "static/js/2.a3f76e81.chunk.js",
+    "static/css/main.5b3599aa.chunk.css",
+    "static/js/main.c1d18133.chunk.js"
+  ]
+}
