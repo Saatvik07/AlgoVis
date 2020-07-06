@@ -4,23 +4,9 @@ import "./Recur.css";
 import FibImage from "./fibo.png";
 import FactImage from "./factorial.png";
 import Loader from "react-loader";
-let exchange,
-  called = 0,
-  loaded = true;
-const fact = (n) => {
-  if (n === 0) {
-    return 1;
-  } else {
-    return n * fact(n - 1);
-  }
-};
-const fib = (n) => {
-  if (n === 0 || n === 1) {
-    return n;
-  } else {
-    return fib(n - 1) + fib(n - 2);
-  }
-};
+import { factorial, removeFactorial } from "../../utils/factorial";
+import { fibonacci } from "../../utils/fib";
+let called = 0;
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
@@ -39,84 +25,24 @@ export class Recur extends React.Component {
       called = 1;
       const a = document.getElementById(`recur-div`);
       a.innerHTML = "";
-      exchange = 0;
-      await this.factorial(this.state.values);
+      await factorial(this.state.values);
       await sleep(500);
-      await this.removeFactorial(this.state.values);
+      await removeFactorial(this.state.values);
     }
   }
   async fibCaller() {
     if (called === 0) {
       called = 1;
-      await this.fibonacci(1);
-      await sleep(300);
-      await this.fibonacci(0);
-    }
-  }
-  async factorial(n) {
-    exchange++;
-    if (n === 0) {
+      await fibonacci(1);
       await sleep(500);
-      return n;
-    } else {
-      const a = document.getElementById(`recur-div`);
-      let div = document.createElement("div");
-      div.id = n;
-      div.className = "recur-individual-fact";
-      div.innerHTML = `${n} * factorial(${n - 1})`;
-      a.appendChild(div);
-      await sleep(500);
-      return n * (await this.factorial(n - 1));
+      await fibonacci(0);
     }
   }
-  async removeFactorial(n) {
-    const parent = document.getElementById(`recur-div`);
-    for (let i = 1; i <= n; i++) {
-      const remove = document.getElementById(`${i}`);
-      remove.innerHTML = `return ${fact(i)}`;
-      remove.className = "recur-individual-leaving";
-      await sleep(500);
-    }
-    await sleep(1000);
-    let div = document.createElement("div");
-    div.id = exchange + 1;
-    div.className = "recur-individual-fact";
-    div.innerHTML = `Factorial(${n})=${fact(n)}`;
-    parent.innerHTML = "";
-    parent.appendChild(div);
-  }
-  async fibonacci(add) {
-    if (add === 1) {
-      document.getElementById("fibTree-container").style.display = "block";
-      for (let i = 1; i <= 17; i++) {
-        if (i !== 14 && i !== 15) {
-          document.getElementById(`fibNode${i}`).style = "visibility:visible;animation: appear 0.5s linear;";
-          if (document.getElementById(`fibSvg${Math.floor(i / 2)}-${i}`)) {
-            document.getElementById(`fibSvg${Math.floor(i / 2)}-${i}`).style = "visibility:visible;animation: appear 0.5s linear;";
-          }
-          await sleep(500);
-        }
-      }
-    } else {
-      for (let i = 17; i >= 1; i--) {
-        if (i !== 14 && i !== 15) {
-          const node = document.getElementById(`fibNode${i}`);
-          const num = Number.parseInt(node.innerText.slice(4, -1), 10);
-          node.innerText = fib(num);
-          node.style = "visibility:visible;background-color:green;color:yellow;font-weight:bold;animation: disappearFib 0.5s linear;";
-          /*if (document.getElementById(`fibSvg${Math.floor(i / 2)}-${i}`)) {
-            document.getElementById(`fibSvg${Math.floor(i / 2)}-${i}`).style = "visibility:hidden;animation:disappearSvg 1s linear;";
-          }*/
-          await sleep(700);
-        }
-      }
-    }
-  }
+
   render() {
     let options, recurDiv, radio;
     if (this.props.algo === "fact") {
       options = <div></div>;
-      exchange = 0;
       recurDiv = <div className='recur-div' id='recur-div'></div>;
       radio = (
         <div className='factSlider-div'>

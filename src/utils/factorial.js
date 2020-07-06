@@ -9,7 +9,6 @@ function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 export const factorial = async (n) => {
-  exchange++;
   if (n === 0) {
     await sleep(500);
     return n;
@@ -21,7 +20,7 @@ export const factorial = async (n) => {
     div.innerHTML = `${n} * factorial(${n - 1})`;
     a.appendChild(div);
     await sleep(500);
-    return n * (await this.factorial(n - 1));
+    return n * (await factorial(n - 1));
   }
 };
 export const removeFactorial = async (n) => {
@@ -34,7 +33,7 @@ export const removeFactorial = async (n) => {
   }
   await sleep(1000);
   let div = document.createElement("div");
-  div.id = exchange + 1;
+  div.id = n;
   div.className = "recur-individual-fact";
   div.innerHTML = `Factorial(${n})=${fact(n)}`;
   parent.innerHTML = "";

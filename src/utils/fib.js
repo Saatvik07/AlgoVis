@@ -9,11 +9,11 @@ function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 const call = [1, 2, 4, 8, 16, 17, 9, 5, 10, 11, 3, 6, 12, 13, 7];
-const remove = [16, 17, 8, 9, 4, 10, 11, 5, 2, 12, 13, 6, 7, 3];
+const remove = [16, 17, 8, 9, 4, 10, 11, 5, 2, 12, 13, 6, 7, 3, 1];
 export const fibonacci = async (add) => {
   if (add === 1) {
     document.getElementById("fibTree-container").style.display = "block";
-    for (let i = 0; i <= call.length; i++) {
+    for (let i = 0; i < call.length; i++) {
       console.log(call[i]);
       document.getElementById(`fibNode${call[i]}`).style = "visibility:visible;animation: appear 0.5s linear;";
       if (document.getElementById(`fibSvg${Math.floor(call[i] / 2)}-${call[i]}`)) {
@@ -22,7 +22,7 @@ export const fibonacci = async (add) => {
       await sleep(500);
     }
   } else {
-    for (let i = 0; i <= remove.length; i++) {
+    for (let i = 0; i < remove.length; i++) {
       const node = document.getElementById(`fibNode${remove[i]}`);
       const num = Number.parseInt(node.innerText.slice(4, -1), 10);
       node.innerText = fib(num);
