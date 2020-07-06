@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "53d27cf660e3676d39f75924585f4e5e",
+    "revision": "088efde98148ef01957eddc1a382e203",
     "url": "/AlgoVis/index.html"
   },
   {
-    "revision": "65b116da6b57b8ec0b77",
+    "revision": "c08ae6aa06c9fa80fe3a",
     "url": "/AlgoVis/static/css/main.5b3599aa.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/AlgoVis/static/js/2.a3f76e81.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "65b116da6b57b8ec0b77",
-    "url": "/AlgoVis/static/js/main.c1d18133.chunk.js"
+    "revision": "c08ae6aa06c9fa80fe3a",
+    "url": "/AlgoVis/static/js/main.b418f262.chunk.js"
   },
   {
     "revision": "c0ea29a732260c8ba7a2",
