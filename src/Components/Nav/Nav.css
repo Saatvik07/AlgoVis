@@ -1,0 +1,29 @@
+.nav-container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 50px;
+  width: 100%;
+  background-color: #007f5f;
+  transition: all 0.3s linear;
+
+  position: relative;
+}
+.path-option {
+  transition: all 0.5s linear;
+}
+.path-btn {
+  background-color: #007f5f;
+  color: #f0f3bd;
+  border: 2px solid #f0f3bd;
+  border-radius: 5px;
+  font-size: 20px;
+  transition: all 0.2s linear;
+  margin: 20px;
+}
+.logo-div {
+  width: 40%;
+}
+.logo {
+  float: right;
+}

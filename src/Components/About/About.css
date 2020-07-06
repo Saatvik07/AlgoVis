@@ -1,0 +1,50 @@
+.about-option-one,
+.about-option-two {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: box-shadow 0.2s linear;
+  width: 30%;
+  min-height: 370px;
+  box-shadow: 10px 10px 5px 5px #444;
+  flex-direction: column;
+  margin: 30px;
+  color: #f0f3bd;
+  background-color: #007f5f;
+  padding: 10px;
+}
+.about-option-one {
+  animation-name: enterOptionAboutOne;
+  animation-duration: 0.5s;
+}
+.about-option-two {
+  animation-name: enterOptionAboutTwo;
+  animation-duration: 0.5s;
+}
+.about-option-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+a {
+  color: yellow;
+  text-decoration: none;
+}
+@keyframes enterOptionAboutOne {
+  0% {
+    transform: translateX(-300px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes enterOptionAboutTwo {
+  0% {
+    transform: translateX(300px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

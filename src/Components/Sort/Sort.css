@@ -1,0 +1,86 @@
+.sort-container {
+  background-image: linear-gradient(to right, #d30000, #6a040f);
+  max-height: 510px;
+}
+.rectangle {
+  fill: #f9c74f;
+}
+.rectangle-pivot {
+  fill: green;
+}
+.rectangle-inProg {
+  fill: orange;
+}
+.rectangle-final {
+  fill: green;
+}
+.loader {
+  margin: 40px;
+}
+.sort-option-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.sort-option {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: box-shadow 0.2s linear;
+  animation-name: enterOptionSort;
+  animation-duration: 0.5s;
+  width: 40%;
+  min-height: 300px;
+  cursor: pointer;
+  box-shadow: 10px 10px 5px 5px #444;
+  flex-direction: column;
+  margin: 30px;
+  color: #f0f3bd;
+  background-color: #6a040f;
+  padding: 10px;
+}
+.radio-div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.length-div,
+.speed-div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #6a040f;
+}
+.speed-div button,
+.length-div button {
+  background-color: #6a040f;
+  color: #f0f3bd;
+  border: none;
+  font-size: 20px;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  animation: enterOptionSort 0.5s linear;
+}
+
+@keyframes enterOptionSort {
+  from {
+    transform: translate(150px) skew(-25deg);
+  }
+  to {
+    transform: translate(0px) skew(0deg);
+  }
+}
+.sort-option p {
+  font-weight: bold;
+}
+.sort-option:active {
+  box-shadow: 0px 0px;
+}
+.selectedButton {
+  background-color: #d30000;
+  color: #f9c74f;
+}

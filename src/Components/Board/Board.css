@@ -1,0 +1,372 @@
+.board-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.navbar {
+  width: 100%;
+}
+.board-col {
+  display: inline-block;
+  border: 2px solid #03045e;
+  height: 25px;
+  width: 25px;
+  animation-name: fadeIn;
+  animation-duration: 0.2s;
+  margin: 0;
+  transition: all 0.2s linear;
+}
+
+.inPath {
+  background-color: yellow;
+}
+.target-image {
+  width: 25px;
+  animation-name: fadeIn;
+  animation-duration: 0.2s;
+  height: auto;
+}
+.crossed {
+  background-color: black;
+}
+.added {
+  background-color: #00a896;
+}
+.board-table {
+  width: 100%;
+  border-spacing: 0px;
+}
+.board-row {
+  width: 25px;
+  margin: 0;
+  padding: 0;
+}
+.tree-level {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.node,
+.Gnode {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  background-color: #02aec4;
+  color: #f0f3bd;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  animation-duration: 0.5s;
+  animation-name: fadeIn;
+  margin: 10px 30px;
+  cursor: pointer;
+}
+.Gnode {
+  margin: 0 10px;
+}
+.visited,
+.Gvisited {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  text-align: center;
+  animation: visitedFade;
+  animation-duration: 0.4s;
+  opacity: 1;
+  margin: 10px 30px;
+  color: black;
+  background-color: yellow;
+}
+.Gvisited {
+  margin: 10px 10px;
+}
+.printed,
+.Gprinted {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  animation: printFade;
+  animation-duration: 0.4s;
+  opacity: 1;
+  margin: 10px 30px;
+  color: #f0f3bd;
+  background-color: #00515b;
+}
+.Gprinted {
+  margin: 10px 10px;
+}
+#node2,
+#node3 {
+  margin: 10px 200px;
+}
+#node4,
+#node5,
+#node6,
+#node7 {
+  margin: 10px 50px;
+}
+#node4,
+#node7 {
+  margin: 10px 70px;
+}
+#node5,
+#node6 {
+  margin: 10px 100px;
+}
+#node11,
+#node12 {
+  margin: 10px 40px;
+}
+.node-removed,
+.Gnode-removed {
+  opacity: 0.4;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #02aec4;
+  margin: 10px 30px;
+  animation-name: fadeOut;
+  animation-duration: 0.5s;
+  cursor: pointer;
+}
+.Gnode-removed {
+  margin: 10px 10px;
+}
+.graph-option-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.graph-option {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s linear;
+  animation-name: enterOptionPath;
+  animation-duration: 0.5s;
+  width: 40%;
+  min-height: 300px;
+  cursor: pointer;
+  box-shadow: 10px 10px 5px 5px #444;
+  flex-direction: column;
+  margin: 30px;
+  background-color: #028090;
+
+  color: #f0f3bd;
+  padding: 10px;
+}
+@keyframes enterOptionPath {
+  0% {
+    transform: scale(0) translateY(500px) translateX(500px);
+  }
+  100% {
+    transform: scale(1) translateY(0px) translateX(0px);
+  }
+}
+.graph-option p {
+  font-weight: bold;
+}
+.graph-option:active {
+  box-shadow: 0px 0px;
+}
+.result-traversal {
+  width: 100%;
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.result-node {
+  margin: 10px;
+  background-color: #00515b;
+  color: #f0f3bd;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  display: flex;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  animation-name: slideIn;
+  animation-duration: 1.5s;
+}
+line {
+  stroke-width: 5px;
+  stroke: #03045e;
+}
+#svg2-5 {
+  margin-right: 125px;
+}
+#svg3-6 {
+  margin-left: 125px;
+}
+
+.connector489,
+.connector51011,
+.connector61213,
+.connector71415 {
+  display: inline-block;
+  margin: 0 75px;
+}
+.connector489 {
+  margin-left: 102px;
+  margin-right: 48px;
+}
+.connector71415 {
+  margin-left: 48px;
+  margin-right: 102px;
+}
+.svg-removed {
+  animation-name: fadeOut;
+  animation-duration: 0.5s;
+}
+.svg-display {
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
+}
+.graph-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.graph-slice1,
+.graph-slice2,
+.graph-slice3,
+.graph-slice4,
+.graph-slice5 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#Gnode2,
+#Gnode3,
+#Gnode4,
+#Gnode5 {
+  margin: 100px 10px;
+}
+#Gnode4,
+#Gnode2 {
+  margin-top: 50px;
+}
+#Gnode3,
+#Gnode5 {
+  margin-bottom: 50px;
+}
+#Gnode7,
+#Gnode8,
+#Gnode9 {
+  margin: 30px 10px;
+}
+#Gnode7 {
+  margin-bottom: 10px;
+}
+#Gnode8 {
+  margin-top: 10px;
+}
+.graph-svg {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+}
+.bfs-traversal {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@keyframes slideIn {
+  from {
+    transform: translateX(300px) rotateZ(360deg);
+  }
+  to {
+    transform: translateX(0px) rotateZ(0deg);
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.4;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes visitedFade {
+  from {
+    background-color: #02aec4;
+  }
+  to {
+    background-color: yellow;
+  }
+}
+@keyframes printFade {
+  from {
+    background-color: yellow;
+    color: black;
+  }
+  to {
+    color: #f0f3bd;
+    background-color: #00515b;
+  }
+}
+@media only screen and (max-width: 1020px) {
+  .board-col {
+    height: 15px;
+    width: 15px;
+  }
+  .target-image {
+    width: 15px;
+    height: auto;
+  }
+}
+.loader {
+  margin: 40px;
+}
+.speedBoard-div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #028090;
+  width: 70%;
+  margin: 0 auto;
+}
+.speedBoard-div button {
+  background-color: #028090;
+  color: #f0f3bd;
+  border: none;
+  font-size: 20px;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  animation: enterOptionPath 0.5s linear;
+}

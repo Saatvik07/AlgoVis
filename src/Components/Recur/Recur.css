@@ -1,0 +1,239 @@
+.recur-individual {
+  background-color: #240046;
+  color: #f0f3bd;
+  margin: 10px 5px;
+  padding: 10px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: appear;
+  animation-duration: 0.2s;
+}
+.recur-individual-fact {
+  background-color: #5500a6;
+  color: #f0f3bd;
+  margin: 20px auto;
+  width: 50%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: appear;
+  animation-duration: 0.2s;
+}
+.recur-individual-leaving {
+  background-color: #240046;
+  color: yellow;
+  font-weight: bold;
+  margin: 20px auto;
+  width: 50%;
+  padding: 10px;
+  visibility: hidden;
+  justify-content: center;
+  align-items: center;
+  animation-name: disappear;
+  animation-duration: 1.5s;
+}
+@keyframes appear {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes disappear {
+  0% {
+    transform: scale(1);
+    background-color: #5500a6;
+    font-weight: bold;
+    color: #f0f3bd;
+    visibility: visible;
+    opacity: 1;
+  }
+  90% {
+    transform: scale(1);
+    opacity: 1;
+    background-color: #240046;
+    font-weight: bold;
+    color: yellow;
+  }
+  100% {
+    transform: scale(0);
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+.recur-div {
+  width: 100%;
+}
+
+.recur-option {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: box-shadow 0.2s linear;
+  width: 40%;
+  min-height: 300px;
+  cursor: pointer;
+  animation-name: enterOptionRecur;
+  animation-duration: 0.5s;
+  box-shadow: 10px 10px 5px 5px #444;
+  flex-direction: column;
+  margin: 30px;
+  color: #f0f3bd;
+  background-color: #240046;
+  padding: 10px;
+}
+.recur-option-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+@keyframes enterOptionRecur {
+  0% {
+    transform: scale(0) rotateY(180deg);
+  }
+  100% {
+    transform: scale(1) rotateY(0deg);
+  }
+}
+.fibTree-level {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.fibNode {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  background-color: #5500a6;
+  color: #f0f3bd;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  animation-duration: 0.5s;
+  animation-name: fadeIn;
+  margin: 10px 30px;
+  visibility: hidden;
+}
+#fibNode2,
+#fibNode3 {
+  margin: 10px 200px;
+}
+#fibNode4,
+#fibNode5,
+#fibNode6,
+#fibNode7 {
+  margin: 10px 50px;
+}
+#fibNode4,
+#fibNode7 {
+  margin: 10px 70px;
+}
+#fibNode5,
+#fibNode6 {
+  margin: 10px 100px;
+}
+#fibNode11,
+#fibNode12 {
+  margin: 10px 40px;
+}
+#fibNode16 {
+  margin-left: 150px;
+}
+#fibDepth4 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+#fibSvg2-5 {
+  margin-right: 125px;
+}
+#fibSvg3-6 {
+  margin-left: 125px;
+}
+#fibSvg1-2,
+#fibSvg1-3,
+#fibSvg2-5,
+#fibSvg2-4,
+#fibSvg3-6,
+#fibSvg3-7 {
+  visibility: hidden;
+}
+.fibConnector489,
+.fibConnector51011,
+.fibConnector61213,
+.fibConnector71415,
+.fibConnector81617 {
+  display: inline-block;
+  visibility: hidden;
+  margin: 0 75px;
+}
+.fibConnector81617 {
+  margin-right: 885px;
+}
+#fibDepth4 {
+  display: flex;
+  align-items: flex-start;
+  width: 40%;
+}
+.fibConnector489 {
+  margin-left: 102px;
+  margin-right: 48px;
+}
+.fibConnector71415 {
+  margin-left: 48px;
+  margin-right: 102px;
+}
+.fibTree-container {
+  display: none;
+}
+@keyframes disappearSvg {
+  from {
+    transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    transform: scale(0);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes disappearFib {
+  0% {
+    transform: scale(1);
+    background-color: #5500a6;
+    font-weight: bold;
+    color: #f0f3bd;
+    visibility: visible;
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    background-color: green;
+    font-weight: bold;
+    color: yellow;
+  }
+}
+.factSlider-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.factSlider-div h3 {
+  margin: 0 50px;
+  color: #240046;
+}
+.loader {
+  margin: 20px;
+}
