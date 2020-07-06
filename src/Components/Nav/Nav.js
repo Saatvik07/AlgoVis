@@ -57,7 +57,7 @@ export class Nav extends React.Component {
       <div class='nav-container' id='nav-container'>
         <div class='path-option'>
           <button onClick={this.onClickOption} className='path-btn' id='path'>
-            Path Finding Algorithms{" "}
+            Traversal Algorithms{" "}
           </button>
         </div>
         <div class='path-option'>
